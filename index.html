@@ -23,15 +23,15 @@
 <body>
   <div id='map'></div>
   <script>
-  mapboxgl.accessToken = 'pk.eyJ1Ijoia3lsZW1hdW5lIiwiYSI6ImNpeXp3dnhjZzA0dTYzM3Bod28zeDU3Y3YifQ.9CpM0Z876TBToQN_7i4BCQ'; // replace this with your access token
+  mapboxgl.accessToken = '{your_access_token}'; // replace this with your access token
   var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/kylemaune/ciz03czwj00002rpsm9r810bh' // replace this with your style
+    style: '{your_style}' // replace this with your style
   });
   // code from the next step will go here
   map.on('click', function(e) {
     var features = map.queryRenderedFeatures(e.point, {
-      layers: ['chicago-parks'] // replace this with the name of the layer
+      layers: ['layer_name'] // replace this with the name of the layer
     });
 
     if (!features.length) {
